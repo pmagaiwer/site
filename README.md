@@ -1,6 +1,6 @@
 # 👨‍💻 Pierre Santos
 
-**Cloud | Big Data | SRE | DevOps**
+**Site Reliability Engineer | Cloud Infrastructure | AWS | Terraform | Monitoring & Observability | Big Data & Data Engineering**
 
 ---
 
