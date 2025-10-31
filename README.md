@@ -157,59 +157,60 @@ Administração de redes LAN/WAN/WLAN · Firewall e IDS/IPS · Diagnóstico de r
 
 ## 🏅 Licenças e Certificações
 - ☁️ Amazon Web Services (AWS)
-- 🧠 AWS Cloud Quest: Generative AI Practitioner - Training Badge (out/2025)
+- 🧠 AWS Cloud Quest: Generative AI Practitioner - Training Badge **(out/2025)**
     - Competências: Inteligência Artificial, Amazon Bedrock, Amazon SageMaker
     - 🤖 Construa e entenda o código com o Amazon Q
     - 🤝 Use serviços de IA com o Amazon SageMaker
     - 💬 Crie um Assistente Inteligente de IA
-- ️☁️ AWS Certified Solutions Architect – Associate (dez/2021 – dez/2024) | Código: F5E41WVLH1411JS1
-- 🌩️ AWS Certified Cloud Practitioner (set/2021 – set/2024) | Código: 4owA6VwM
+- ️☁️ AWS Certified Solutions Architect – Associate **(dez/2021 – dez/2024)** 
+    - Código: **F5E41WVLH1411JS1**
+- 🌩️ AWS Certified Cloud Practitioner **(set/2021 – set/2024)** 
+    - Código: **4owA6VwM**
 - Databricks
-    - 📚 Academy Accreditation – Databricks Fundamentals (out/2025 – out/2026) | Código: 164515718
+    - 📚 Academy Accreditation – Databricks Fundamentals **(out/2025 – out/2026)**
+    - Código: **164515718**
     - Competências: Hadoop, Azure Databricks
 
 ---
 
 ## Itaú Unibanco
-- 📊 Practitioner – D&A Foundation (ago/2023)
-    - Código: 540107316
+- 📊 Practitioner – D&A Foundation **(ago/2023)**
+    - Código: **540107316**
     - Competências: Hadoop
 
-- 📈 Observability Metrics (mai/2023 – mai/2028)
-    - Código: 474276688
+- 📈 Observability Metrics **(mai/2023 – mai/2028)**
+    - Código: **474276688**
     - Competências: SRE
 
-- 🔐 Privacy Champion (mai/2023)
-    -  Código: 469409660
+- 🔐 Privacy Champion **(mai/2023)**
+    -  Código: **469409660**
 
 ## Cloudera
-- 🧩 Cloudera Essentials for CDP (jun/2022)
-    - Código: 124438862
+- 🧩 Cloudera Essentials for CDP **(jun/2022)**
+    - Código: **124438862**
     - Competências: Hadoop
 
 ## DevOps Institute
-- ⚙️ SRE Foundation Certification (mar/2022)
-    - Código: 23039386
+- ⚙️ SRE Foundation Certification **(mar/2022)**
+    - Código: **23039386**
     - Competências: SRE
 
 ## ITCERTS / EXIN
-
-🔒 Cloud Security Foundation Certificate – Código: 5F5F61E
-🧩 DevOps Essentials Certificate – Código: 5F5F61D
-🚀 DevOps Lead Certificate – Código: 5F5F61F
-☁️ EXIN Cloud Computing Foundation – Código: 6192510
-💡 Lean IT Essentials Certificate – Código: 5F5F61B
-🌀 Scrum Essentials Certificate – Código: 5F5F61C
+- 🔒 Cloud Security Foundation Certificate – Código: **5F5F61E**
+- 🧩 DevOps Essentials Certificate – Código: **5F5F61D**
+- 🚀 DevOps Lead Certificate – Código: **5F5F61F**
+- ☁️ EXIN Cloud Computing Foundation – Código: **6192510**
+- 💡 Lean IT Essentials Certificate – Código: **5F5F61B**
+- 🌀 Scrum Essentials Certificate – Código: **5F5F61C**
 
 ## 🌱 Idiomas
-- 🇺🇸 Inglês: Intermediário
-- 🇧🇷 Português: Nativo
+- 🇺🇸 Inglês: **Intermediário**
+- 🇧🇷 Português: **Nativo**
 
 ## 🚀 Interesses
 - Cloud, Observabilidade, SRE, IA Generativa, Automação, Comunidades Tech, Corrida e Motociclismo 🏍️
 
 ## 🔹 Competências Principais
-
 - Administração de sistemas em ambientes distribuídos  
 - Cloud Computing (AWS, Azure, GCP, OpenStack)  
 - Sustentação de clusters Hadoop Cloudera  
@@ -245,8 +246,6 @@ Mais certificações disponíveis em:
 📍 São Paulo – SP  
 
 ---
-
-### 💭 *SRE e Cloud para um futuro resiliente* 🌎
 
 
 🖋️ *© 2025 Pierre Santos – Todos os direitos reservados.*
