@@ -27,6 +27,16 @@ Apaixonado por **confiabilidade, métricas e inovação,** sempre buscando simpl
 
 ---
 
+## 🤝 Voluntariado
+
+### 🍔💙 Voluntário — *set/2025*  
+**Hamburgada do Bem** · São Paulo, Brasil  
+
+**Hamburgada do Bem** é um projeto social criado em 2015 por *Erick e Tacio Watanabe* e *Thiago Sales*, unindo a paixão por hambúrguer e o desejo de transformar vidas.  
+
+O projeto nasceu para levar **alimentação, diversão e amor** a crianças em situação de vulnerabilidade social. Desde a primeira edição, em **Guarulhos (SP)**, com *86 crianças e 70 voluntários*, a iniciativa cresceu e hoje realiza ações em **diversas cidades do Brasil**, promovendo dias de lazer, aprendizado e solidariedade. 💙
+
+
 ## 💼 Experiência Profissional
 # 🏦 Itaú Unibanco
 
