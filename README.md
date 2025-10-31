@@ -19,6 +19,7 @@
 ## 🧭 Resumo Profissional
 
 Profissional com mais de 10 anos de experiência em **Infraestrutura, Cloud e Observabilidade**, atuando como **Site Reliability Engineer (SRE) e Cloud Engineer.**
+
 Especialista em **AWS, Kubernetes, CI/CD, observabilidade (Grafana, Datadog, Prometheus, Alertmanager)** e automação com **Terraform e Ansible.**
 
 Com sólida experiência em **produtização de SLI/SLO**, gestão de incidentes, cultura DevOps e otimização de desempenho de aplicações e sistemas distribuídos.
@@ -234,7 +235,7 @@ AWS · Azure · Datadog · Prometheus · Grafana · CloudWatch · Docker · Kube
 - Databricks Fundamentals 📊  
 - SRE Foundation 🔧  
 
-Mais certificações disponíveis em:  
+# Mais **certificações** disponíveis em:  
 👉 [Minhas Badges na Credly](https://www.credly.com/users/pierre-santos/badges#credly)
 
 ---
@@ -242,7 +243,9 @@ Mais certificações disponíveis em:
 ## 📫 Contato
 
 🔗 [LinkedIn – Pierre M. Santos](https://www.linkedin.com/in/pierremsantos)  
+
 📧 contato@magaiwer.com
+
 📍 São Paulo – SP  
 
 ---
