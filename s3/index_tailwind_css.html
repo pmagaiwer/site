@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br" xml:lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome para ícones -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <title>Pierre Santos - SRE | Cloud Engineer</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body { 
+      background-color: rgb(249, 250, 251);
+      color: rgb(31, 41, 55);
+      line-height: 1.625;
+    }
+    .nav-link {
+      color: rgb(75, 85, 99);
+      transition-property: color;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 200ms;
+    }
+    .nav-link:hover {
+      color: rgb(37, 99, 235);
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: rgb(17, 24, 39);
+      margin-bottom: 1rem;
+      padding-top: 4rem;
+    }
+    .card {
+      background-color: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: box-shadow 200ms;
+    }
+    .card:hover {
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    .tag {
+      display: inline-block;
+      background-color: rgb(219, 234, 254);
+      color: rgb(30, 64, 175);
+      font-size: 0.875rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background-color: rgb(37, 99, 235);
+      color: white;
+      padding: 0.75rem;
+      border-radius: 9999px;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      transition: background-color 200ms;
+    }
+    .back-to-top:hover {
+      background-color: rgb(29, 78, 216);
+    }
+    main { 
+      max-width: 72rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 6rem;
+    }
+  </style>
+
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Pierre Santos</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navegação -->
+  <nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="text-2xl font-bold text-gray-900">Pierre Santos</div>
+    <!-- Menu Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white px-4 py-2">
+      <a href="#sobre" class="block py-2 nav-link">Sobre</a>
+      <a href="#experiencia" class="block py-2 nav-link">Experiência</a>
+      <a href="#competencias" class="block py-2 nav-link">Competências</a>
+      <a href="#formacao" class="block py-2 nav-link">Formação</a>
+      <a href="#certificacoes" class="block py-2 nav-link">Certificações</a>
+      <a href="#contato" class="block py-2 nav-link">Contato</a>
+    </div>
+  </nav>
+
+  <!-- Conteúdo Principal -->
+  <main class="max-w-6xl mx-auto px-4 pt-24">
+    <!-- Seção Inicial -->
+    <section id="inicio" class="text-center mb-16">
+<figure>
+<img src="head.jpg" alt="Cabeçalho" />
+<figcaption aria-hidden="true"></figcaption>
+</figure>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">👨‍💻 Pierre Santos</h1>
+      <h3 class="text-xl text-gray-600 mb-4"><em>Observabilidade e Cloud para um futuro resiliente ☁️</em></h3>
+      <div class="flex flex-wrap justify-center gap-2 mb-6">
+        <span class="tag">Site Reliability Engineer</span>
+        <span class="tag">Cloud Infrastructure</span>
+        <span class="tag">AWS</span>
+        <span class="tag">Terraform</span>
+        <span class="tag">Monitoring & Observability</span>
+        <span class="tag">Big Data & Data Engineering</span>
+      </div>
+      <!-- Links Profissionais -->
+      <div class="flex justify-center gap-4 mt-6">
+        <a href="https://www.linkedin.com/in/pierremsantos/" class="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">
+          <i class="fab fa-linkedin mr-2"></i> LinkedIn
+        </a>
+        <a href="https://www.credly.com/users/pierre-santos/badges#credly" class="inline-flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
+          <i class="fas fa-award mr-2"></i> Certificações
+        </a>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="card">
+      <h2 class="section-title">🧭 Sobre</h2>
+<p>Profissional com mais de 10 anos de experiência em
+<strong>Infraestrutura, Cloud e Observabilidade</strong>, atuando como
+<strong>Site Reliability Engineer (SRE) e Cloud Engineer.</strong></p>
+<p>Especialista em <strong>AWS, Kubernetes, CI/CD, observabilidade
+(Grafana, Datadog, Prometheus, Alertmanager)</strong> e automação com
+<strong>Terraform e Ansible.</strong></p>
+<p>Com sólida experiência em <strong>produtização de SLI/SLO</strong>,
+gestão de incidentes, cultura DevOps e otimização de desempenho de
+aplicações e sistemas distribuídos.</p>
+<p>Apaixonado por <strong>confiabilidade, métricas e inovação,</strong>
+sempre buscando simplificar e automatizar ambientes complexos em
+cloud.</p>
+<hr />
+<h2 id="voluntariado">🤝 Voluntariado</h2>
+<h3 id="voluntário-set2025">🍔💙 Voluntário — <em>set/2025</em></h3>
+<p><strong>Hamburgada do Bem</strong> · São Paulo, Brasil</p>
+<p><strong>Hamburgada do Bem</strong> é um projeto social criado em 2015
+por <em>Erick e Tacio Watanabe</em> e <em>Thiago Sales</em>, unindo a
+paixão por hambúrguer e o desejo de transformar vidas.</p>
+<p>O projeto nasceu para levar <strong>alimentação, diversão e
+amor</strong> a crianças em situação de vulnerabilidade social. Desde a
+primeira edição, em <strong>Guarulhos (SP)</strong>, com <em>86 crianças
+e 70 voluntários</em>, a iniciativa cresceu e hoje realiza ações em
+<strong>diversas cidades do Brasil</strong>, promovendo dias de lazer,
+aprendizado e solidariedade. 💙</p>
+    <!-- Experiência -->
+    <section id="experiencia" class="card">
+      <h2 class="section-title">💼 Experiência Profissional</h2>
+      <div class="space-y-8">
+        <div class="bg-gray-50 rounded-lg p-6">
+          <div class="flex items-center mb-4">
+            <div class="text-3xl mr-4">🏦</div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">Itaú Unibanco</h3>
+              <p class="text-blue-600">SRE | Cloud Engineer | Observability</p>
+              <p class="text-gray-500">📅 abr/2021 – set/2025</p>
+            </div>
+          </div>
+          <ul class="space-y-2 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2">•</span>
+              Implementação de pipelines CI/CD com Jenkins, GitLab e ArgoCD
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2">•</span>
+              Criação e manutenção de dashboards de observabilidade (Grafana, Datadog, Prometheus)
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2">•</span>
+              Desenvolvimento de automações com Terraform, Python e Shell Script
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2">•</span>
+              Produtização de SLI/SLOs e integração com Alertmanager e ServiceNow
+            </li>
+            <li class="flex items-start">
+              <span class="text-blue-600 mr-2">•</span>
+              Projetos de modernização em CDP (Cloudera Data Platform), integrando observabilidade com AWS e CloudWatch
+            </li>
+          </ul>
+        </div>
+<h1 id="principais-resultados">Principais resultados:</h1>
+<ul>
+<li>✅ Redução de 60% no MTTR com automação de alertas e
+incidentes.</li>
+<li>✅ Aumento da confiabilidade dos clusters Hadoop e CDP.</li>
+</ul>
+<hr />
+<h2 id="cargo-anterior-infraestrutura-cloud-sysops-devops">☁️ Cargo
+Anterior – Infraestrutura Cloud / SysOps / DevOps</h2>
+<h1 id="section">📅 2017 – 2021</h1>
+<ul>
+<li>Migração de ambientes VMware → OpenStack → AWS.</li>
+<li>Administração de servidores Linux, tuning de performance e
+segurança.</li>
+<li>Monitoramento com Zabbix, CloudWatch e Datadog.</li>
+<li>Criação de scripts para provisionamento e automação de tarefas.</li>
+<li>Stack utilizada: AWS, Ansible, Terraform, Docker, Git, Shell Script,
+Python.</li>
+</ul>
+<hr />
+<h2 id="experiências-anteriores-20122017">💻 Experiências anteriores
+(2012–2017)</h2>
+<ul>
+<li>Analista de Sistemas / SysAdmin / Suporte Cloud</li>
+<li>Administração de sistemas Linux e Windows.</li>
+<li>Monitoramento de infraestrutura e gestão de incidentes.</li>
+<li>Atuação em ambientes críticos de alta disponibilidade.</li>
+</ul>
+    <!-- Competências -->
+    <section id="competencias" class="card">
+      <h2 class="section-title">🧩 Competências Técnicas</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">☁️</div>
+          <h3 class="font-bold mb-2">Cloud</h3>
+          <p class="text-gray-600">AWS, Azure, OpenStack, Cloudera CDP</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">🧠</div>
+          <h3 class="font-bold mb-2">SRE / Observabilidade</h3>
+          <p class="text-gray-600">Datadog, Grafana, Prometheus, Alertmanager</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">🛠️</div>
+          <h3 class="font-bold mb-2">Infraestrutura como Código</h3>
+          <p class="text-gray-600">Terraform, Ansible, CloudFormation</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">🐳</div>
+          <h3 class="font-bold mb-2">Containers</h3>
+          <p class="text-gray-600">Docker, Kubernetes, Helm</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">⚙️</div>
+          <h3 class="font-bold mb-2">CI/CD</h3>
+          <p class="text-gray-600">Jenkins, GitLab CI, ArgoCD</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">📊</div>
+          <h3 class="font-bold mb-2">Logs e Métricas</h3>
+          <p class="text-gray-600">Loki, ELK Stack, CloudWatch Logs</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">💾</div>
+          <h3 class="font-bold mb-2">Banco de Dados</h3>
+          <p class="text-gray-600">PostgreSQL, MySQL, DynamoDB</p>
+        </div>
+        <div class="bg-gray-50 rounded-lg p-4">
+          <div class="text-2xl mb-2">💻</div>
+          <h3 class="font-bold mb-2">Linguagens</h3>
+          <p class="text-gray-600">Python, Bash, YAML, SQL</p>
+        </div>
+      </div>
+    </section>
+<hr />
+<h2 id="formação-acadêmica">🎓 Formação Acadêmica</h2>
+<h3 id="mba-em-gestão-empresarial">MBA em Gestão Empresarial</h3>
+<p>📍 <strong>Fundação Getulio Vargas (FGV)</strong> | 2019 – 2021</p>
+<p><strong>Soft Skills:</strong><br />
+Liderança e influência positiva · Pensamento estratégico · Visão
+sistêmica de negócios · Capacidade analítica · Comunicação assertiva ·
+Gestão de mudanças · Tomada de decisão orientada a resultados ·
+Networking e relacionamento profissional</p>
+<p><strong>Competências Técnicas:</strong><br />
+Negociação e decisão baseada em dados · Planejamento estratégico ·
+Gestão de equipes · Governança corporativa · Gestão de projetos (PMBOK,
+Ágil) · Finanças e viabilidade · Inovação e transformação digital · KPIs
+e OKRs · Marketing estratégico</p>
+<hr />
+<h3 id="tecnólogo-em-redes-de-computadores">Tecnólogo em Redes de
+Computadores</h3>
+<p>📍 <strong>Universidade Ibirapuera</strong> | 2008 – 2010</p>
+<p><strong>Soft Skills:</strong><br />
+Raciocínio lógico · Solução de problemas técnicos · Tomada de decisão
+sob pressão · Trabalho em equipe · Gestão de tempo · Segurança e
+disponibilidade</p>
+<p><strong>Competências Técnicas:</strong><br />
+Administração de redes LAN/WAN/WLAN · Firewall e IDS/IPS · Diagnóstico
+de rede · Automação (Python/Shell) · TCP/IP · DNS · DHCP · VLAN · VPN ·
+Windows Server · Linux · Segurança da informação · Virtualização (AWS,
+Azure, VMware) · Documentação técnica</p>
+<hr />
+<h2 id="cursos-e-certificações-especializadas">💡 Cursos e Certificações
+Especializadas</h2>
+<h3 id="appoena">Appoena</h3>
+<ul>
+<li><strong>Datadog Power User (mai/2025):</strong> Observabilidade
+avançada, governança de monitoramento, alertas inteligentes, integrações
+AWS/Kubernetes.<br />
+<em>Competências:</em> Datadog · Observabilidade · SRE · Métricas e
+logs<br />
+</li>
+<li><strong>Troubleshooting com Datadog (out/2025):</strong> Diagnóstico
+de incidentes e correlação de eventos em tempo real.<br />
+<em>Competências:</em> Métricas · Logs · Dashboards · Análise de
+performance</li>
+</ul>
+<h3 id="aws-training-certification">AWS Training &amp;
+Certification</h3>
+<ul>
+<li><strong>Building Data Lakes on AWS (nov/2023):</strong> Lake
+Formation · Glue · Athena · Big Data architectures<br />
+</li>
+<li><strong>DevOps Engineering on AWS (mai/2021):</strong> CI/CD ·
+Microservices · Serverless · Security Automation · Observabilidade<br />
+</li>
+<li><strong>Advanced Developing on AWS (out/2021):</strong>
+Microservices · Cloud-native design · IaC<br />
+</li>
+<li><strong>Systems Operations on AWS (mai/2019):</strong>
+Infraestrutura como código · Monitoramento · Automação e otimização de
+custos<br />
+</li>
+<li><strong>AWS Technical Professional (APN) (2016):</strong>
+Fundamentos de computação em nuvem, migração e segurança</li>
+</ul>
+<h3 id="fiap">FIAP</h3>
+<ul>
+<li><strong>Big Data &amp; Analytics (abr/2022):</strong> Hadoop · Spark
+· Tableau · MongoDB · Governança e visualização · Machine Learning</li>
+</ul>
+<h3 id="estabilis-academy">Estabilis Academy</h3>
+<ul>
+<li><strong>AWS na Prática (set/2021):</strong> Implantação e gestão de
+ambientes AWS · Automação · Observabilidade e segurança</li>
+</ul>
+<h3 id="google-cloud">Google Cloud</h3>
+<ul>
+<li><strong>G Suite Customer Success: Technology (300) e People (400)
+(2017):</strong> Adoção de soluções cloud e transformação digital</li>
+</ul>
+<h3 id="ka-solution">Ka Solution</h3>
+<ul>
+<li><strong>Microsoft Azure IaaS (2016):</strong> ARM · VMs · Networking
+· PowerShell · Backup · Automação</li>
+</ul>
+<h3 id="udemy-brasil">Udemy Brasil</h3>
+<ul>
+<li><strong>Monitoramento de Aplicações com Prometheus e Grafana
+(mar/2020)</strong><br />
+</li>
+<li><strong>OpenStack Essentials (mar/2020)</strong><br />
+</li>
+<li><strong>Python 3 Completo – Do iniciante ao avançado
+(mai/2019)</strong></li>
+</ul>
+<h3 id="alura">Alura</h3>
+<ul>
+<li><strong>Kubernetes: Orquestração de Containers
+(dez/2020)</strong><br />
+</li>
+<li><strong>Docker: Criando Containers sem Dor de Cabeça
+(dez/2020)</strong><br />
+</li>
+<li><strong>GitLab CI e Docker: Pipeline de Entrega Contínua
+(dez/2020)</strong><br />
+</li>
+<li><strong>Git e GitHub: Controle e Compartilhe seu Código
+(dez/2020)</strong></li>
+</ul>
+<h3 id="tempo-real-eventos">Tempo Real Eventos</h3>
+<ul>
+<li><strong>Nagios Formação Essencial (2014):</strong> Instalação,
+configuração e desenvolvimento de plugins de monitoramento
+corporativo</li>
+</ul>
+<hr />
+<h2 id="licenças-e-certificações">🏅 Licenças e Certificações</h2>
+<ul>
+<li>☁️ Amazon Web Services (AWS)</li>
+<li>🧠 AWS Cloud Quest: Generative AI Practitioner - Training Badge
+<strong>(out/2025)</strong>
+<ul>
+<li>Competências: Inteligência Artificial, Amazon Bedrock, Amazon
+SageMaker</li>
+<li>🤖 Construa e entenda o código com o Amazon Q</li>
+<li>🤝 Use serviços de IA com o Amazon SageMaker</li>
+<li>💬 Crie um Assistente Inteligente de IA</li>
+</ul></li>
+<li>️☁️ AWS Certified Solutions Architect – Associate <strong>(dez/2021
+– dez/2024)</strong>
+<ul>
+<li>Código: <strong>F5E41WVLH1411JS1</strong></li>
+</ul></li>
+<li>🌩️ AWS Certified Cloud Practitioner <strong>(set/2021 –
+set/2024)</strong>
+<ul>
+<li>Código: <strong>4owA6VwM</strong></li>
+</ul></li>
+<li>Databricks
+<ul>
+<li>📚 Academy Accreditation – Databricks Fundamentals <strong>(out/2025
+– out/2026)</strong></li>
+<li>Código: <strong>164515718</strong></li>
+<li>Competências: Hadoop, Azure Databricks</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="itaú-unibanco-1">Itaú Unibanco</h2>
+<ul>
+<li>📊 Practitioner – D&amp;A Foundation <strong>(ago/2023)</strong>
+<ul>
+<li>Código: <strong>540107316</strong></li>
+<li>Competências: Hadoop</li>
+</ul></li>
+<li>📈 Observability Metrics <strong>(mai/2023 – mai/2028)</strong>
+<ul>
+<li>Código: <strong>474276688</strong></li>
+<li>Competências: SRE</li>
+</ul></li>
+<li>🔐 Privacy Champion <strong>(mai/2023)</strong>
+<ul>
+<li>Código: <strong>469409660</strong></li>
+</ul></li>
+</ul>
+<h2 id="cloudera">Cloudera</h2>
+<ul>
+<li>🧩 Cloudera Essentials for CDP <strong>(jun/2022)</strong>
+<ul>
+<li>Código: <strong>124438862</strong></li>
+<li>Competências: Hadoop</li>
+</ul></li>
+</ul>
+<h2 id="devops-institute">DevOps Institute</h2>
+<ul>
+<li>⚙️ SRE Foundation Certification <strong>(mar/2022)</strong>
+<ul>
+<li>Código: <strong>23039386</strong></li>
+<li>Competências: SRE</li>
+</ul></li>
+</ul>
+<h2 id="itcerts-exin">ITCERTS / EXIN</h2>
+<ul>
+<li>🔒 Cloud Security Foundation Certificate – Código:
+<strong>5F5F61E</strong></li>
+<li>🧩 DevOps Essentials Certificate – Código:
+<strong>5F5F61D</strong></li>
+<li>🚀 DevOps Lead Certificate – Código: <strong>5F5F61F</strong></li>
+<li>☁️ EXIN Cloud Computing Foundation – Código:
+<strong>6192510</strong></li>
+<li>💡 Lean IT Essentials Certificate – Código:
+<strong>5F5F61B</strong></li>
+<li>🌀 Scrum Essentials Certificate – Código:
+<strong>5F5F61C</strong></li>
+</ul>
+<h2 id="idiomas">🌱 Idiomas</h2>
+<ul>
+<li>🇺🇸 Inglês: <strong>Intermediário</strong></li>
+<li>🇧🇷 Português: <strong>Nativo</strong></li>
+</ul>
+<h2 id="interesses">🚀 Interesses</h2>
+<ul>
+<li>Cloud, Observabilidade, SRE, IA Generativa, Automação, Comunidades
+Tech, Corrida e Motociclismo 🏍️</li>
+</ul>
+<h2 id="competências-principais">🔹 Competências Principais</h2>
+<ul>
+<li>Administração de sistemas em ambientes distribuídos<br />
+</li>
+<li>Cloud Computing (AWS, Azure, GCP, OpenStack)<br />
+</li>
+<li>Sustentação de clusters Hadoop Cloudera<br />
+</li>
+<li>Projetos de Big Data (DataMesh, CDP)<br />
+</li>
+<li>Metodologias ágeis (Lean, Scrum)<br />
+</li>
+<li>Cultura DevOps e SRE</li>
+</ul>
+<hr />
+<h2 id="principais-ferramentas-e-habilidades-técnicas">🔧 Principais
+Ferramentas e Habilidades Técnicas</h2>
+<p>AWS · Azure · Datadog · Prometheus · Grafana · CloudWatch · Docker ·
+Kubernetes · Terraform · Jenkins · GitLab CI/CD · Linux · Python ·
+Automação · Observabilidade · SRE · FinOps · Big Data · Virtualização ·
+Troubleshooting</p>
+<hr />
+<h2 id="resumo-das-certificações">🎓 Resumo das Certificações</h2>
+<ul>
+<li>AWS Certified ☁️<br />
+</li>
+<li>Azure Certified 🧩<br />
+</li>
+<li>OpenStack Certified ⚙️<br />
+</li>
+<li>Databricks Fundamentals 📊<br />
+</li>
+<li>SRE Foundation 🔧</li>
+</ul>
+<h1 id="mais-certificações-disponíveis-em">Mais
+<strong>certificações</strong> disponíveis em:</h1>
+<p>👉 <a
+href="https://www.credly.com/users/pierre-santos/badges#credly">Minhas
+Badges na Credly</a></p>
+<hr />
+<h2 id="contato">📫 Contato</h2>
+<p>🔗 <a href="https://www.linkedin.com/in/pierremsantos">LinkedIn –
+Pierre M. Santos</a></p>
+<p>📧 pmagaiwer@gmail.com</p>
+<p>📍 São Paulo – SP</p>
+    <footer class="text-center py-8 text-gray-600">
+      <p>🖋️ <em>© 2025 Pierre Santos – Todos os direitos reservados.</em></p>
+    </footer>
+  </main>
+
+  <!-- Botão Voltar ao Topo -->
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript para Menu Mobile -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('mobile-menu');
+      menu.classList.toggle('hidden');
+    }
+
+    // Fechar menu mobile ao clicar em um link
+    document.querySelectorAll('#mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
