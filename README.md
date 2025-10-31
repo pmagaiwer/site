@@ -244,7 +244,7 @@ AWS · Azure · Datadog · Prometheus · Grafana · CloudWatch · Docker · Kube
 
 🔗 [LinkedIn – Pierre M. Santos](https://www.linkedin.com/in/pierremsantos)  
 
-📧 contato@magaiwer.com
+📧 pmagaiwer@gmail.com
 
 📍 São Paulo – SP  
 
