@@ -1,10 +1,9 @@
-<!--![Cabeçalho](head.jpg) https://raw.githubusercontent.com/pmagaiwer/site/refs/heads/main/head.jpg-->
-![Cabeçalho](https://raw.githubusercontent.com/pmagaiwer/site/refs/heads/main/head.jpg)
+![Cabeçalho](head.jpg)
 
 # 👨‍💻 Pierre Santos  
 ### *Observabilidade e Cloud para um futuro resiliente ☁️*
 
-**Site Reliability Engineer | Cloud Infrastructure | AWS | Azure | Terraform | Monitoring & Observability | Big Data & Data Engineering**
+**Site Reliability Engineer | Cloud Infrastructure | AWS | Terraform | Monitoring & Observability | Big Data & Data Engineering**
 
 ---
 
@@ -12,7 +11,6 @@
 
 📎 Acesse meu perfil completo:  
 👉 [https://www.linkedin.com/in/pierremsantos/](https://www.linkedin.com/in/pierremsantos/)  
-
 🏅 Veja minhas certificações e badges:  
 👉 [https://www.credly.com/users/pierre-santos/badges#credly](https://www.credly.com/users/pierre-santos/badges#credly)
 
@@ -173,9 +171,6 @@ Administração de redes LAN/WAN/WLAN · Firewall e IDS/IPS · Diagnóstico de r
     - 📚 Academy Accreditation – Databricks Fundamentals **(out/2025 – out/2026)**
     - Código: **164515718**
     - Competências: Hadoop, Azure Databricks
-- Microsoft Certified
-    - Azure Fundamentals (AZ-900)
-    - Código: **F88923113F939282**
 
 ---
 
@@ -255,11 +250,5 @@ AWS · Azure · Datadog · Prometheus · Grafana · CloudWatch · Docker · Kube
 
 ---
 
-## 🌍 Versões de Idiomas
-
-- 🇺🇸 [English Version](README.md)
-- 🇧🇷 [Versão em Português](README_pt.md) (Atual)
-
----
 
 🖋️ *© 2025 Pierre Santos – Todos os direitos reservados.*
